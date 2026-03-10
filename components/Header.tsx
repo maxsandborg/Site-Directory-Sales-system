@@ -72,7 +72,7 @@ export default function Header() {
               Categories
             </Link>
             <Link
-              href="/#compare"
+              href="/about"
               className="text-sm font-medium px-3 py-2 rounded-md no-underline"
               style={{ color: "#c8dff0" }}
               onMouseEnter={(e) => {
@@ -84,7 +84,7 @@ export default function Header() {
                 (e.target as HTMLElement).style.backgroundColor = "transparent";
               }}
             >
-              Compare
+              About
             </Link>
           </nav>
 
@@ -133,7 +133,7 @@ export default function Header() {
           <div className="px-4 py-3 flex flex-col gap-1">
             <Link href="/" className="text-white text-sm font-medium py-2 no-underline">All Tools</Link>
             <Link href="/#categories" className="text-white text-sm font-medium py-2 no-underline">Categories</Link>
-            <Link href="/#compare" className="text-white text-sm font-medium py-2 no-underline">Compare</Link>
+            <Link href="/about" className="text-white text-sm font-medium py-2 no-underline">About</Link>
             <Link href="/advertise" className="text-sm font-medium py-2 no-underline" style={{ color: "#f59e0b" }}>Advertise</Link>
             <Link href="/submit" className="text-sm font-medium py-2 no-underline" style={{ color: "#60a5fa" }}>Submit a Tool</Link>
           </div>

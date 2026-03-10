@@ -133,7 +133,7 @@ export default function Home() {
               {filteredTools.length === 0 ? (
                 <div className="bg-white rounded-xl p-10 text-center" style={{ border: "1px solid #e2e8f0" }}>
                   <p className="text-lg font-bold" style={{ color: "#0f2340" }}>No tools found</p>
-                  <p className="text-sm mt-1" style={{ color: "#64748b" }}>Try a different search term or category.</p>
+                  <p className="text-sm mt-1" style={{ color: "#64748b" }}>Try a different category.</p>
                 </div>
               ) : (
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
