@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ToolCard from "@/components/ToolCard";
@@ -14,8 +14,41 @@ export default function Home() {
     activeCategory === "All" || tool.categories.includes(activeCategory)
   );
 
+  // ItemList schema: tells Google exactly what tools we list and their order
+  const homeSchema = useMemo(() => ({
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Best Field Sales & D2D Software Tools 2026",
+    "description": "The most complete directory of field sales and door-to-door software, ranked and reviewed by the FieldSalesTools editorial team.",
+    "url": "https://www.fieldsalestools.com",
+    "numberOfItems": tools.length,
+    "itemListElement": featured.map((tool, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "name": tool.name,
+      "url": `https://www.fieldsalestools.com/tools/${tool.slug}`,
+      "description": tool.tagline,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": tool.name,
+        "applicationCategory": "BusinessApplication",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": tool.rating.toString(),
+          "reviewCount": tool.reviewCount.toString(),
+          "bestRating": "5",
+          "worstRating": "1"
+        }
+      }
+    }))
+  }), [featured]);
+
   return (
     <div className="min-h-screen flex flex-col" style={{ backgroundColor: "#f4f6f9" }}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homeSchema) }}
+      />
       <Header />
 
       {/* Hero */}
@@ -50,8 +83,8 @@ export default function Home() {
             <div className="flex flex-wrap justify-center gap-8">
               {[
                 { label: "Tools Listed", value: "20+" },
-                { label: "Categories", value: "5" },
-                { label: "Reviews", value: "2,800+" },
+                { label: "Industries", value: "8+" },
+                { label: "User Reviews", value: "2,800+" },
               ].map((stat) => (
                 <div key={stat.label} className="text-center">
                   <div className="text-2xl font-black text-white">{stat.value}</div>

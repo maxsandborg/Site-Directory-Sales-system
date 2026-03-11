@@ -77,10 +77,22 @@ export default function ToolCard({ tool, rank }: { tool: Tool; rank?: number }) 
         {/* Logo & name */}
         <div className="flex items-start gap-3 mb-3 mt-1">
           <div
-            className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl flex-shrink-0"
+            className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 overflow-hidden"
             style={{ backgroundColor: "#f0f4f8", border: "1px solid #e2e8f0" }}
           >
-            {tool.logo}
+            <img
+              src={`https://logo.clearbit.com/${new URL(tool.website).hostname}`}
+              alt={`${tool.name} logo`}
+              width={40}
+              height={40}
+              style={{ objectFit: "contain", width: "40px", height: "40px" }}
+              onError={(e) => {
+                const target = e.currentTarget;
+                target.style.display = "none";
+                const parent = target.parentElement;
+                if (parent) parent.innerHTML = `<span style="font-size:1.5rem">${tool.logo}</span>`;
+              }}
+            />
           </div>
           <div className="flex-1 min-w-0">
             <h3

@@ -89,8 +89,62 @@ export default async function ComparisonPage({ params }: { params: Promise<{ slu
   const bestFor2 = c ? c.bestFor2 : tool2.pros[0] ?? `${tool2Name} users`;
   const verdict = c ? c.verdict : `Based on ratings and features, ${winnerName ?? "both tools"} ${winnerOverall === "tie" ? "are evenly matched" : "has the edge"} — but the right choice depends on your team's specific workflow and budget.`;
 
+  // JSON-LD: ComparisonPage schema with both SoftwareApplications + BreadcrumbList
+  const compareSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "name": title,
+        "description": metaDesc,
+        "url": `https://www.fieldsalestools.com/compare/${slug}`,
+        "dateModified": "2026-03-01",
+        "about": [
+          {
+            "@type": "SoftwareApplication",
+            "name": tool1Name,
+            "url": `https://www.fieldsalestools.com/tools/${slug1}`,
+            "applicationCategory": "BusinessApplication",
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": tool1.rating.toString(),
+              "reviewCount": tool1.reviewCount.toString(),
+              "bestRating": "5",
+              "worstRating": "1"
+            }
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": tool2Name,
+            "url": `https://www.fieldsalestools.com/tools/${slug2}`,
+            "applicationCategory": "BusinessApplication",
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": tool2.rating.toString(),
+              "reviewCount": tool2.reviewCount.toString(),
+              "bestRating": "5",
+              "worstRating": "1"
+            }
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.fieldsalestools.com" },
+          { "@type": "ListItem", "position": 2, "name": "Compare", "item": "https://www.fieldsalestools.com/compare" },
+          { "@type": "ListItem", "position": 3, "name": `${tool1Name} vs ${tool2Name}`, "item": `https://www.fieldsalestools.com/compare/${slug}` }
+        ]
+      }
+    ]
+  };
+
   return (
     <div className="min-h-screen flex flex-col" style={{ backgroundColor: "#f4f6f9" }}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(compareSchema) }}
+      />
       <Header />
 
       {/* Hero */}

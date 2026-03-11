@@ -71,8 +71,53 @@ export default async function AlternativesPage({ params }: { params: Promise<{ s
     `Looking to evaluate all options before deciding`,
   ];
 
+  // JSON-LD: ItemList of alternatives + BreadcrumbList
+  const pageSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ItemList",
+        "name": `Best ${tool.name} Alternatives 2026`,
+        "description": `The top alternatives to ${tool.name} for field sales teams, ranked and reviewed by FieldSalesTools.`,
+        "url": `https://www.fieldsalestools.com/alternatives/${slug}`,
+        "numberOfItems": alternatives.length,
+        "itemListElement": alternatives.map((alt, i) => ({
+          "@type": "ListItem",
+          "position": i + 1,
+          "name": alt.name,
+          "url": `https://www.fieldsalestools.com/tools/${alt.slug}`,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": alt.name,
+            "description": alt.tagline,
+            "applicationCategory": "BusinessApplication",
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": alt.rating.toString(),
+              "reviewCount": alt.reviewCount.toString(),
+              "bestRating": "5",
+              "worstRating": "1"
+            }
+          }
+        }))
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.fieldsalestools.com" },
+          { "@type": "ListItem", "position": 2, "name": tool.name, "item": `https://www.fieldsalestools.com/tools/${slug}` },
+          { "@type": "ListItem", "position": 3, "name": `${tool.name} Alternatives`, "item": `https://www.fieldsalestools.com/alternatives/${slug}` }
+        ]
+      }
+    ]
+  };
+
   return (
     <div className="min-h-screen flex flex-col" style={{ backgroundColor: "#f4f6f9" }}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
+      />
       <Header />
 
       {/* Hero */}

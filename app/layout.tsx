@@ -11,10 +11,71 @@ export const metadata: Metadata = {
     title: "Field Sales Tools — The #1 Directory for D2D & Field Sales Software",
     description:
       "Compare the best field sales and door-to-door software tools. Honest reviews and pricing.",
-    url: "https://fieldsalestools.com",
+    url: "https://www.fieldsalestools.com",
     siteName: "FieldSalesTools.com",
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Field Sales Tools — The #1 Directory for D2D & Field Sales Software",
+    description:
+      "Compare the best field sales and door-to-door software tools. Honest reviews and pricing.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+    },
+  },
+  alternates: {
+    canonical: "https://www.fieldsalestools.com",
+  },
+};
+
+// Site-wide JSON-LD: Organization + WebSite (with SearchAction for Google Sitelinks Search Box)
+const siteSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.fieldsalestools.com/#organization",
+      "name": "FieldSalesTools.com",
+      "url": "https://www.fieldsalestools.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.fieldsalestools.com/logo.png",
+        "width": 200,
+        "height": 60
+      },
+      "description":
+        "The leading directory for field sales and door-to-door software. Honest reviews, pricing comparisons, and expert recommendations for D2D sales teams.",
+      "sameAs": []
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.fieldsalestools.com/#website",
+      "url": "https://www.fieldsalestools.com",
+      "name": "FieldSalesTools.com",
+      "description":
+        "The #1 directory for field sales and D2D software tools. Compare SPOTIO, SalesRabbit, Badger Maps, and 17 more platforms.",
+      "publisher": {
+        "@id": "https://www.fieldsalestools.com/#organization"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://www.fieldsalestools.com/?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+  ]
 };
 
 export default function RootLayout({
@@ -24,6 +85,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(siteSchema) }}
+        />
+      </head>
       <body className="antialiased">{children}</body>
     </html>
   );

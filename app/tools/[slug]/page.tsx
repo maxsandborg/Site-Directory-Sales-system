@@ -63,8 +63,90 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
       t.categories.some((c) => tool.categories.includes(c))
   ).slice(0, 3);
 
+  // Parse numeric price from pricingFrom (e.g. "$25/user/month" → 25)
+  const priceMatch = tool.pricingFrom.match(/\$(\d+)/);
+  const numericPrice = priceMatch ? priceMatch[1] : null;
+
+  const toolSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "name": tool.name,
+        "description": tool.description,
+        "url": `https://www.fieldsalestools.com/tools/${tool.slug}`,
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": tool.platforms.join(", "),
+        "dateModified": "2026-03-01",
+        ...(numericPrice && {
+          "offers": {
+            "@type": "Offer",
+            "price": numericPrice,
+            "priceCurrency": "USD",
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "priceType": "https://schema.org/MinimumAdvertisedPrice",
+              "unitText": "per user per month"
+            }
+          }
+        }),
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": tool.rating.toString(),
+          "reviewCount": tool.reviewCount.toString(),
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        ...(review && {
+          "review": {
+            "@type": "Review",
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": review.editorScore.toString(),
+              "bestRating": "10",
+              "worstRating": "1"
+            },
+            "author": {
+              "@type": "Organization",
+              "name": "FieldSalesTools Editorial Team"
+            },
+            "reviewBody": review.reviewBody[0],
+            "datePublished": "2026-03-01"
+          }
+        })
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.fieldsalestools.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "All Tools",
+            "item": "https://www.fieldsalestools.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": tool.name,
+            "item": `https://www.fieldsalestools.com/tools/${tool.slug}`
+          }
+        ]
+      }
+    ]
+  };
+
   return (
     <div className="min-h-screen flex flex-col" style={{ backgroundColor: "#f4f6f9" }}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(toolSchema) }}
+      />
       <Header />
 
       {/* Tool hero */}
@@ -83,10 +165,25 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
             <div className="flex-1">
               <div className="flex items-center gap-4 mb-4">
                 <div
-                  className="w-16 h-16 rounded-2xl flex items-center justify-center text-3xl flex-shrink-0"
-                  style={{ backgroundColor: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)" }}
+                  className="w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0 overflow-hidden"
+                  style={{ backgroundColor: "rgba(255,255,255,0.95)", border: "1px solid rgba(255,255,255,0.2)", padding: "6px" }}
                 >
-                  {tool.logo}
+                  <img
+                    src={`https://logo.clearbit.com/${new URL(tool.website).hostname}`}
+                    alt={`${tool.name} logo`}
+                    width={52}
+                    height={52}
+                    style={{ objectFit: "contain", width: "52px", height: "52px" }}
+                    onError={(e) => {
+                      const target = e.currentTarget;
+                      target.style.display = "none";
+                      const parent = target.parentElement;
+                      if (parent) {
+                        parent.style.backgroundColor = "rgba(255,255,255,0.1)";
+                        parent.innerHTML = `<span style="font-size:1.75rem">${tool.logo}</span>`;
+                      }
+                    }}
+                  />
                 </div>
                 <div>
                   <div className="flex items-center gap-2 flex-wrap">

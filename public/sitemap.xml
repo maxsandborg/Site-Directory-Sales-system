@@ -31,6 +31,13 @@
   <url><loc>https://www.fieldsalestools.com/tools/geopointe</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.fieldsalestools.com/tools/marketsharp</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
+  <!-- Alternatives pages -->
+  <url><loc>https://www.fieldsalestools.com/alternatives/spotio</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.fieldsalestools.com/alternatives/salesrabbit</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.fieldsalestools.com/alternatives/badger-maps</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.fieldsalestools.com/alternatives/map-my-customers</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.fieldsalestools.com/alternatives/knockbase</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
   <!-- Compare hub + comparison pages -->
   <url><loc>https://www.fieldsalestools.com/compare</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.fieldsalestools.com/compare/spotio-vs-salesrabbit</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
