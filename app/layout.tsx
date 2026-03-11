@@ -90,6 +90,12 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(siteSchema) }}
         />
+        {/* Plausible Analytics — privacy-friendly, GDPR-compliant, no cookie banner needed */}
+        <script
+          defer
+          data-domain="fieldsalestools.com"
+          src="https://plausible.io/js/script.js"
+        />
       </head>
       <body className="antialiased">{children}</body>
     </html>

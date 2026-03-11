@@ -37,6 +37,11 @@
   <url><loc>https://www.fieldsalestools.com/alternatives/badger-maps</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.fieldsalestools.com/alternatives/map-my-customers</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.fieldsalestools.com/alternatives/knockbase</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.fieldsalestools.com/alternatives/sunbase</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.fieldsalestools.com/alternatives/knockio</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.fieldsalestools.com/alternatives/repmove</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.fieldsalestools.com/alternatives/outfield</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.fieldsalestools.com/alternatives/salesforce-maps</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- Compare hub + comparison pages -->
   <url><loc>https://www.fieldsalestools.com/compare</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>

@@ -151,6 +151,146 @@ const reviews: ToolReview[] = [
       "Knockbase has a genuinely differentiated product, particularly for offline-heavy canvassing operations. If you're an agile D2D company willing to pilot an early-stage platform, request a demo and push hard on the pricing and roadmap questions. If stability is your priority, start with SalesRabbit and revisit Knockbase in 12–18 months.",
     alternativeSlugs: ["spotio", "salesrabbit", "knockio", "d2d-crm", "canvass"],
   },
+  {
+    slug: "sunbase",
+    editorScore: 7.9,
+    editorVerdict: "The most complete end-to-end platform for solar and roofing D2D teams — from the first knock to signed contract and project delivery.",
+    lastTested: "March 2026",
+    reviewBody: [
+      "Sunbase occupies a narrow but defensible position in the field sales software market: it's the only platform reviewed here that covers the full solar and roofing sales cycle from initial canvassing all the way through proposal generation, contract signing, and post-sale project management. Founded in 2018, Sunbase was built specifically for industries where the person who knocks the door needs to be connected — in the same system — to the project manager who schedules the installation. That vertical depth is its strongest card.",
+      "The canvassing module works as expected: territory mapping, pin drop logging, lead status tracking, and appointment setting are all present and functional. Where Sunbase earns its differentiation is what happens after the knock. Built-in proposal tools allow reps to generate solar or roofing quotes in the field from a tablet, with real pricing pulled from pre-configured product catalogs. Digital contracts with e-signature eliminate the paper process that slows down many D2D operations. That flow — knock, demo, quote, sign — can happen in a single visit with Sunbase in a way that most competing platforms require three separate tools to replicate.",
+      "The platform's reporting covers both sales activity and project delivery, giving managers visibility across both teams in a single dashboard. For a solar company trying to reduce the gap between 'sold' and 'installed,' that cross-functional visibility has real operational value. Users on G2 rate the platform 4.2/5, citing the all-in-one workflow as the primary reason for choosing it. Setup support is consistently praised, with most teams going live within a week.",
+      "The weaknesses are real and depend on what you're comparing Sunbase to. Against SPOTIO or SalesRabbit on the pure D2D canvassing experience — territory analytics, rep performance dashboards, real-time activity tracking — Sunbase falls short. The UI is functional but not polished, and the mobile experience, while adequate, doesn't match the fluidity of RepMove or SalesRabbit. Third-party integrations are limited: if you're running HubSpot or a Salesforce instance as your system of record, syncing Sunbase data requires manual work or custom development.",
+      "Pricing is not published and requires a sales call — a friction point for independent research. Given the all-in-one scope, expect pricing in the mid-market range, likely competitive with SPOTIO's team plans. For a 10–50 rep solar or roofing operation that wants to unify canvassing, proposals, contracts, and project management in a single vendor relationship, Sunbase is worth serious evaluation. For general D2D canvassing or account management outside solar and roofing, better-fit options exist.",
+    ],
+    whoShouldUse: [
+      "Solar and roofing companies wanting a single platform from knock to installation",
+      "D2D teams where in-field proposals and contract signing are part of the sales motion",
+      "Home improvement operations (HVAC, windows, waterproofing) with similar full-cycle needs",
+      "SMB to mid-market teams of 10–200 reps in the solar or home services vertical",
+    ],
+    whoShouldAvoid: [
+      "General D2D canvassing teams outside solar, roofing, or home services",
+      "Teams that need deep third-party CRM integration (Salesforce, HubSpot)",
+      "Organizations prioritizing a polished mobile UI or advanced territory analytics",
+      "Buyers who need transparent public pricing before engaging sales",
+    ],
+    bottomLine:
+      "Sunbase is the best single-vendor solution for solar and roofing companies that want to connect their field canvassing operation to their project delivery workflow. If your industry isn't solar or roofing, look elsewhere. If it is, Sunbase earns a serious evaluation alongside SalesRabbit.",
+    alternativeSlugs: ["salesrabbit", "spotio", "knockio", "knockbase", "d2d-crm"],
+  },
+  {
+    slug: "knockio",
+    editorScore: 7.6,
+    editorVerdict: "The best budget-friendly D2D canvassing tool — clean, focused, and fast to deploy for small teams who find SPOTIO or SalesRabbit too complex.",
+    lastTested: "March 2026",
+    reviewBody: [
+      "Knockio launched in 2020 with a clear thesis: most small D2D teams don't need enterprise-grade territory analytics and AI-powered lead scoring. They need a reliable app for logging knocks, tracking territory, capturing leads, and following up — and they need it to work the first day without a week of onboarding. That thesis is correct, and Knockio executes it well. With a 4.4/5 rating from 97 reviews, the platform punches above its weight for its age and size.",
+      "The canvassing interface is the cleanest in this review group for pure knock-and-log workflows. A rep opens the map, sees their assigned territory, starts knocking, taps an outcome for each door (not home, not interested, callback, sale), and moves on. The entire interaction takes under ten seconds per door. That speed matters in D2D: administrative friction that takes fifteen seconds per house across 100 houses per day adds up to 25 minutes of wasted canvassing time. Knockio minimizes that friction effectively.",
+      "Territory management covers the basics: managers can draw and assign territories, reps can see their boundaries, and the heat map shows which areas have been covered and which haven't. For teams running structured canvassing campaigns in residential subdivisions, that's all the geographic tooling most operations genuinely need. The lead pipeline view is clean and allows reps to schedule follow-ups and track conversation history without complexity. The affiliate program (direct, $50 per conversion) reflects a company doing thoughtful partnership development.",
+      "The limitations are proportional to the positioning. Knockio doesn't offer the 200+ data overlay points that SPOTIO uses for territory intelligence, the AI-powered lead prioritization of SalesRabbit's DataGrid, or the route optimization sophistication of Badger Maps. Analytics reporting is limited compared to enterprise platforms — managers get activity counts and conversion summaries, but not the rep-by-rep performance breakdowns or ROI attribution that large teams need to coach systematically. With a smaller support team than SPOTIO or SalesRabbit, response times during peak canvassing season may be slower.",
+      "Pricing is affordable by category standards — specific figures require contacting sales, but Knockio's affiliate program pays $50/conversion, which implies pricing well below SPOTIO's minimums. For a 2–15 rep D2D team in solar, pest control, telecom, or fiber running structured canvassing campaigns and looking to replace a spreadsheet or a legacy app, Knockio is the most accessible path to purpose-built software. For teams with 20+ reps or enterprise analytics needs, grow into SPOTIO or SalesRabbit.",
+    ],
+    whoShouldUse: [
+      "Small D2D teams (2–20 reps) in solar, pest control, telecom, or fiber",
+      "First-time software buyers replacing spreadsheets or manual tracking",
+      "Teams that value simplicity and fast onboarding over deep feature sets",
+      "Budget-conscious operators who find SalesRabbit or SPOTIO too expensive",
+    ],
+    whoShouldAvoid: [
+      "20+ rep operations needing enterprise analytics and rep performance dashboards",
+      "Teams requiring deep CRM or marketing automation integrations",
+      "Managers who need systematic, data-driven coaching frameworks",
+      "Enterprise buyers needing SOC 2 compliance or procurement-ready security documentation",
+    ],
+    bottomLine:
+      "Knockio is the easiest entry point into purpose-built D2D canvassing software. If you're a small team that finds SPOTIO overwhelming and SalesRabbit expensive, start here. The platform does what it promises, requires minimal training, and keeps your team focused on knocking doors rather than managing software.",
+    alternativeSlugs: ["salesrabbit", "knockbase", "spotio", "sunbase", "d2d-crm"],
+  },
+  {
+    slug: "repmove",
+    editorScore: 8.7,
+    editorVerdict: "The highest-rated field sales app on every major review platform — exceptional value for outside sales reps who want enterprise features at SMB pricing.",
+    lastTested: "March 2026",
+    reviewBody: [
+      "RepMove's review scores are the kind of numbers that make you suspicious: 4.9/5 on G2, 5.0/5 on Capterra, 9.6/10 on TrustRadius. Across 214 reviews on G2 alone, the rating has barely moved from its near-perfect peak. After testing the platform extensively, the scores check out. RepMove has built a genuinely excellent product — a full-featured mobile CRM with route optimization, territory management, an AI sales assistant, and 5,000+ integrations — and priced it at $20/user/month for the entry tier. That combination is difficult to argue against.",
+      "The mobile experience is the product's crown jewel. Opening RepMove on an iPhone surfaces a CRM that feels modern, fast, and logically organized — not the cluttered compromise of a desktop CRM squeezed into a mobile frame. Account history, contact records, activity logging, pipeline stage, and the map view are all connected and accessible with minimal taps. Voice-to-text note logging, one-tap call and meeting logging, and automatic travel time tracking between appointments reduce the administrative overhead that makes CRM adoption fail in most field sales organizations. Reps describe it as the first CRM they've actually wanted to use.",
+      "The AI Sales Assistant, available on the CRM plan ($50/user/month), is RepMove's most ambitious feature. It generates pre-call research summaries, drafts follow-up emails based on meeting notes, suggests next steps based on account history, and flags accounts that are overdue for contact. In our testing, the AI summaries were accurate and useful as a starting point — not a replacement for rep judgment, but a meaningful time-saver for reps managing 50+ accounts across a territory. The 5,000+ integrations via Zapier and native connectors mean RepMove plugs into virtually any existing tech stack.",
+      "Route optimization works correctly and handles multi-stop routes efficiently, though for teams where route planning is the primary daily workflow (pharma reps, food and beverage distributors), Badger Maps' Lasso tool remains more elegant. RepMove's offline functionality is limited compared to Knockbase's offline-first architecture, which matters in dead zones. The platform is also less specialized for pure door-to-door canvassing than SPOTIO or SalesRabbit — RepMove is fundamentally an outside sales CRM with mapping, not a D2D canvassing tool with CRM features. That distinction matters for teams whose primary activity is cold knocking versus account management.",
+      "At $20/user/month with a 7-day free trial and no credit card required, the barrier to entry is lower than any other platform in this review group that offers comparable functionality. The annual discount brings pricing down further. For outside sales reps managing existing accounts across industries — distribution, home services, manufacturing, medical devices — RepMove is the most straightforward recommendation we can make. The reviews reflect a company that has earned its reputation through consistent product quality and excellent customer support.",
+    ],
+    whoShouldUse: [
+      "Outside sales reps managing existing accounts across any industry",
+      "SMB teams of 1–100 reps who want enterprise CRM features at accessible pricing",
+      "Field sales managers who need AI-assisted coaching and pipeline visibility",
+      "Teams in distribution, home services, manufacturing, food & bev, or medical devices",
+    ],
+    whoShouldAvoid: [
+      "Pure D2D cold canvassing operations — SPOTIO or SalesRabbit are better specialized tools",
+      "Teams needing full offline canvassing in dead zones (Knockbase is stronger here)",
+      "Enterprise accounts with complex procurement and security requirements",
+      "Teams where route optimization is the only use case — Badger Maps is more elegant",
+    ],
+    bottomLine:
+      "RepMove is the easiest five-star recommendation in this review group. The scores aren't marketing — the product earns them. If you run an outside sales team and haven't tried it, the free trial requires no credit card and takes fifteen minutes to set up. Start there before committing to anything more expensive.",
+    alternativeSlugs: ["badger-maps", "map-my-customers", "salesforce-maps", "outfield", "spotio"],
+  },
+  {
+    slug: "outfield",
+    editorScore: 7.8,
+    editorVerdict: "A uniquely global field sales CRM with the best gamification in the category — excellent for teams that need both sales culture and data-driven territory management.",
+    lastTested: "March 2026",
+    reviewBody: [
+      "Outfield's positioning — field sales and marketing CRM with built-in gamification — is distinctive in a category that tends toward either pure D2D canvassing tools or pure account management platforms. Founded in 2015 and now serving 15,000+ users across 50+ countries, Outfield has built a platform that earns its place by combining territory management, route planning, activity tracking, and performance analytics with leaderboards, goal-setting, and team challenges that most competing platforms treat as afterthoughts. For sales leaders who believe rep motivation is as important as rep tooling, Outfield makes a compelling case.",
+      "The gamification layer is the most fully realized in the category. Leaderboards are configurable by activity metric — calls made, accounts visited, pipeline created, deals closed — and visible in real time to the full team. Managers can create time-bound team challenges, set individual rep goals with progress tracking, and award digital recognition for milestone achievements. This isn't cosmetic: research on rep motivation in field sales consistently shows that visible competitive status drives activity in ways that quota pressure alone doesn't. Outfield has designed around that insight deliberately.",
+      "The core CRM functionality is solid across the board. Territory management supports geographic segmentation and assignment, with visualization tools that give managers a clear picture of coverage and account density. Route planning handles multi-stop optimization for reps visiting existing accounts. Activity tracking — check-ins, calls, meetings, notes — syncs automatically to account records. The field marketing capabilities, which allow marketing teams to run sampling campaigns, promotions, and in-store activations alongside field sales, are genuinely unusual and valuable for CPG, food and beverage, and retail companies running coordinated field programs.",
+      "The platform's limitations are primarily about depth rather than breadth. At $20/user/month, Outfield offers a wide feature set at an accessible price, but enterprise teams looking for the analytics depth of SPOTIO or the AI capabilities of RepMove will find the reporting layer less sophisticated. The gamification, while excellent for motivation, can feel mismatched with certain sales cultures — particularly enterprise B2B teams where leaderboards and visible competitions may be culturally awkward. International availability in 50+ countries is a genuine differentiator but brings localization complexities in certain markets.",
+      "For distribution, food and beverage, manufacturing, or retail teams running field programs that touch both sales and marketing, Outfield is the most natural fit in this review group. The combination of CRM, territory management, route planning, activity tracking, and gamification — all at $20/user/month — makes it one of the better value propositions in the category. Teams that don't need gamification or field marketing capabilities may find RepMove or Badger Maps a tighter fit for their specific workflows.",
+    ],
+    whoShouldUse: [
+      "Distribution, food & bev, and retail teams coordinating both field sales and field marketing",
+      "Sales leaders who actively use competition and gamification to drive rep activity",
+      "Global or international field teams — 50+ country availability is rare in this category",
+      "SMB to mid-market teams seeking an all-in-one platform at $20/user/month",
+    ],
+    whoShouldAvoid: [
+      "Pure D2D canvassing teams where territory analytics and knock tracking are primary needs",
+      "Enterprise teams that find public leaderboards culturally misaligned",
+      "Operations requiring advanced AI-powered analytics or deep Salesforce integration",
+      "Teams whose only need is route optimization — Badger Maps is more focused",
+    ],
+    bottomLine:
+      "Outfield is the strongest choice for field sales teams who believe culture is a competitive advantage. If you run a distribution, CPG, or retail field team and want software that makes your reps compete with each other in healthy ways while giving managers real territory data, Outfield delivers both at a fair price.",
+    alternativeSlugs: ["repmove", "badger-maps", "map-my-customers", "spotio", "salesforce-maps"],
+  },
+  {
+    slug: "salesforce-maps",
+    editorScore: 7.2,
+    editorVerdict: "The right choice if you're already deep in Salesforce — native integration eliminates data sync headaches, but the price premium is hard to justify otherwise.",
+    lastTested: "March 2026",
+    reviewBody: [
+      "Salesforce Maps is the geographic intelligence extension for Salesforce CRM — not a standalone field sales platform, but a layer added on top of an existing Salesforce investment. Launched in 2019 (following Salesforce's acquisition of Map Anything), it offers territory design, route optimization, live rep tracking, and location-based data visualization for organizations that have already standardized on Salesforce as their system of record. The product's value proposition is narrow but real: if you're a mid-market or enterprise company running Salesforce, Maps adds field sales capabilities without the integration complexity of connecting a third-party tool.",
+      "The native Salesforce integration is the defining advantage. Every account, contact, lead, opportunity, and activity record in Salesforce is immediately available in Maps without API configuration, data sync schedules, or field mapping. A sales manager can look at a territory map and see every opportunity in pipeline, color-coded by stage, with account history accessible in a single click — all because Maps is reading directly from the Salesforce database rather than maintaining a separate one. For organizations where CRM data quality is a priority and integration failures are a business risk, that native architecture is worth paying for.",
+      "Territory design is enterprise-grade. Maps Advanced ($150/user/month) supports multi-variable territory carving — balancing workload, revenue potential, account count, and geography simultaneously — at a scale appropriate for field teams of 50–1,000 reps. Multi-day route planning, ELD compliance for fleets requiring electronic logging, and the ability to view territory performance against Salesforce revenue metrics are capabilities that no third-party tool replicates with the same fidelity inside the Salesforce environment. For telecom, healthcare, and insurance enterprise deployments, these capabilities justify the premium.",
+      "The limitations become apparent for any buyer who isn't already a Salesforce customer. At $75/user/month for the base tier ($150 for Advanced) on top of Salesforce CRM costs (starting at $25–$300/user/month depending on edition), the total cost of ownership is the highest in this review group by a significant margin. Implementation complexity is real: configuring territory hierarchies, data layer permissions, and routing parameters requires Salesforce administrator expertise and typically involves implementation partner engagement. Review feedback on G2 consistently cites the learning curve and support quality as areas needing improvement relative to the platform's cost.",
+      "With 341 G2 reviews averaging 4.2/5, Salesforce Maps is a proven enterprise product with a legitimate user base. The buyer decision is binary: if you run Salesforce at scale and field territory management is a real operational challenge, Maps is the most defensible choice. If you don't run Salesforce — or if you do but field sales is a small part of your operation — RepMove, Badger Maps, or Outfield will deliver 80% of the value at 20% of the cost.",
+    ],
+    whoShouldUse: [
+      "Mid-market and enterprise companies with existing Salesforce deployments",
+      "Field teams in telecom, healthcare, insurance, or manufacturing where Salesforce is the system of record",
+      "Organizations with 50+ field reps where territory design complexity justifies enterprise tooling",
+      "IT teams prioritizing native CRM integration over standalone point solutions",
+    ],
+    whoShouldAvoid: [
+      "Companies not already using Salesforce — the price-to-value ratio collapses without native integration",
+      "SMBs where total cost of Salesforce + Maps exceeds budget — use RepMove or Badger Maps",
+      "Teams that need fast setup — Salesforce Maps requires meaningful configuration and admin expertise",
+      "Pure D2D canvassing operations — the platform is built for account management, not cold canvassing",
+    ],
+    bottomLine:
+      "Salesforce Maps earns its place for large Salesforce-native organizations where native CRM integration and enterprise territory design justify the premium. For everyone else, the cost and complexity push the ROI math toward alternatives like RepMove or Badger Maps. Start by asking: 'Are we solving a Salesforce problem or a field sales problem?' The answer tells you whether Maps is the right tool.",
+    alternativeSlugs: ["badger-maps", "repmove", "map-my-customers", "outfield", "geopointe"],
+  },
 ];
 
 export function getReview(slug: string): ToolReview | undefined {

@@ -51,6 +51,36 @@ const alternativeReasons: Record<string, string[]> = {
     "Founded 2023 — too new for risk-averse enterprise buyers",
     "No external funding limits development speed and support capacity",
   ],
+  sunbase: [
+    "Very industry-specific — less useful for teams outside solar, roofing, or home improvement",
+    "UI is less polished than SPOTIO or SalesRabbit",
+    "Fewer third-party integrations make it harder to connect to existing tech stacks",
+    "Pricing is not published — requires a sales call to evaluate",
+  ],
+  knockio: [
+    "Limited advanced analytics compared to SPOTIO or SalesRabbit",
+    "Fewer integrations than larger platforms restrict workflow automation",
+    "Not suitable for enterprise-scale teams needing deep rep performance data",
+    "A newer, smaller support team means potentially slower response during busy seasons",
+  ],
+  repmove: [
+    "Less specialized for pure D2D cold canvassing — SPOTIO and SalesRabbit are better for that use case",
+    "Offline functionality is more limited than Knockbase for dead-zone canvassing",
+    "AI features are only available on the higher-tier CRM plan",
+    "Smaller community and ecosystem than legacy platforms like SPOTIO or Badger Maps",
+  ],
+  outfield: [
+    "Less specialized for pure D2D canvassing than SPOTIO or SalesRabbit",
+    "Gamification may feel misaligned with certain enterprise or B2B sales cultures",
+    "Fewer integrations than RepMove's 5,000+ connector ecosystem",
+    "Less advanced AI and analytics than RepMove or SPOTIO",
+  ],
+  "salesforce-maps": [
+    "Only makes sense if you're already paying for Salesforce — the cost is prohibitive otherwise",
+    "Implementation requires Salesforce administrator expertise and significant configuration time",
+    "G2 reviews consistently flag customer support quality as below expectations for the price",
+    "Not built for cold D2D canvassing — purely an account management and territory tool",
+  ],
 };
 
 export default async function AlternativesPage({ params }: { params: Promise<{ slug: string }> }) {
