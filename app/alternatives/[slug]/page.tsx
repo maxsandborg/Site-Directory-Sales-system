@@ -81,6 +81,66 @@ const alternativeReasons: Record<string, string[]> = {
     "G2 reviews consistently flag customer support quality as below expectations for the price",
     "Not built for cold D2D canvassing — purely an account management and territory tool",
   ],
+  repsly: [
+    "Built for CPG retail execution — teams in D2D canvassing or B2B distribution need a different tool",
+    "Enterprise pricing requires a sales call and can be high for smaller distributors",
+    "Full feature set requires meaningful onboarding and training investment",
+    "Less useful outside the food, beverage, and consumer goods verticals",
+  ],
+  skynamo: [
+    "Pricing is custom and not published — requires a sales call to get a number",
+    "Less suited for D2D canvassing or retail execution than for B2B distribution sales",
+    "Implementation involves ERP integration work that adds setup complexity and timeline",
+    "Primary focus is B2B distribution and manufacturing — not ideal for consumer-facing D2D teams",
+  ],
+  maptive: [
+    "Not a field rep CRM — no knock logging, lead capture, or in-field mobile workflow",
+    "Higher annual cost ($1,250+) than more full-featured field sales platforms",
+    "Limited mobile app functionality compared to SPOTIO, RepMove, or SalesRabbit",
+    "Real-time field rep GPS tracking is not a core feature",
+  ],
+  "leadsquared-field-force": [
+    "Support operates in international time zones — US teams report meaningful response gaps",
+    "Built primarily for Asian enterprise markets; North American D2D workflows feel secondary",
+    "Complex setup and implementation — not suitable for small teams without IT resources",
+    "Overkill for teams under 100 reps — the enterprise scale is a cost and complexity burden",
+  ],
+  canvass: [
+    "Limited CRM and pipeline management — not suitable for complex sales workflows",
+    "Basic reporting only — managers needing analytics dashboards will hit the ceiling quickly",
+    "No advanced integrations with CRM or marketing automation tools",
+    "Not scalable for teams beyond 15–20 reps",
+  ],
+  "d2d-crm": [
+    "Limited scalability — the platform's ceiling is visible for teams beyond 20–25 reps",
+    "Dated UI compared to modern alternatives like RepMove or Knockio",
+    "Few third-party integrations restrict workflow automation",
+    "Smaller development team means slower product updates and feature additions",
+  ],
+  leadbeam: [
+    "Newer platform (2021) with a shorter track record than established alternatives",
+    "Priced at $49/user/month — higher than RepMove ($20) or Outfield ($20) for comparable functionality",
+    "Best value requires annual commitment — quarterly pricing at $65/user/month is steep",
+    "Less suited for pure D2D canvassing than for outside sales account management",
+  ],
+  geopointe: [
+    "Requires Salesforce — there's no compelling reason to use Geopointe without the CRM integration",
+    "UI complexity for non-technical users is a recurring theme in reviews",
+    "Less powerful than Salesforce Maps for enterprise-scale territory design",
+    "Parent company (Ascendix) is a consulting firm, not a pure-play product company — affects roadmap pace",
+  ],
+  "insitu-sales": [
+    "Niche focus on wholesale distribution — not suitable for D2D canvassing or retail execution",
+    "Smaller feature set than Skynamo's ERP integration depth or Repsly's AI shelf auditing",
+    "Limited integrations compared to premium platforms",
+    "Less suited for teams outside food & bev, wholesale, or specialty distribution",
+  ],
+  marketsharp: [
+    "Monthly pricing ($199+) is high for smaller home improvement operations",
+    "Dated UI compared to modern platforms — the mobile experience lags newer tools",
+    "Only useful within home improvement verticals — very limited outside windows, roofing, HVAC",
+    "Low G2 review volume (97 after 30 years) suggests limited digital community for peer support",
+  ],
 };
 
 export default async function AlternativesPage({ params }: { params: Promise<{ slug: string }> }) {

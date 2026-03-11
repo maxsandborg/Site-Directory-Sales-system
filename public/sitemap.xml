@@ -42,6 +42,16 @@
   <url><loc>https://www.fieldsalestools.com/alternatives/repmove</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.fieldsalestools.com/alternatives/outfield</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.fieldsalestools.com/alternatives/salesforce-maps</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.fieldsalestools.com/alternatives/repsly</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.fieldsalestools.com/alternatives/skynamo</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.fieldsalestools.com/alternatives/maptive</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.fieldsalestools.com/alternatives/leadsquared-field-force</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.fieldsalestools.com/alternatives/canvass</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.fieldsalestools.com/alternatives/d2d-crm</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.fieldsalestools.com/alternatives/leadbeam</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.fieldsalestools.com/alternatives/geopointe</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.fieldsalestools.com/alternatives/insitu-sales</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.fieldsalestools.com/alternatives/marketsharp</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
   <!-- Compare hub + comparison pages -->
   <url><loc>https://www.fieldsalestools.com/compare</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
