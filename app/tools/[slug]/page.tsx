@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { getToolBySlug, getAllSlugs, tools } from "@/data/tools";
 import { getReview } from "@/data/reviews";
+import ToolLogo from "@/components/ToolLogo";
 
 export async function generateStaticParams() {
   return getAllSlugs().map((slug) => ({ slug }));
@@ -168,21 +169,11 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
                   className="w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0 overflow-hidden"
                   style={{ backgroundColor: "rgba(255,255,255,0.95)", border: "1px solid rgba(255,255,255,0.2)", padding: "6px" }}
                 >
-                  <img
-                    src={`https://logo.clearbit.com/${new URL(tool.website).hostname}`}
-                    alt={`${tool.name} logo`}
-                    width={52}
-                    height={52}
-                    style={{ objectFit: "contain", width: "52px", height: "52px" }}
-                    onError={(e) => {
-                      const target = e.currentTarget;
-                      target.style.display = "none";
-                      const parent = target.parentElement;
-                      if (parent) {
-                        parent.style.backgroundColor = "rgba(255,255,255,0.1)";
-                        parent.innerHTML = `<span style="font-size:1.75rem">${tool.logo}</span>`;
-                      }
-                    }}
+                  <ToolLogo
+                    website={tool.website}
+                    name={tool.name}
+                    fallbackEmoji={tool.logo}
+                    size={52}
                   />
                 </div>
                 <div>
