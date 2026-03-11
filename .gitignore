@@ -39,3 +39,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# LibreOffice/Excel lock files
+.~lock.*
+
+# Local strategy documents (not part of the site build)
+*.md
+!README.md
