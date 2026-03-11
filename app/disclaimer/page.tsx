@@ -78,8 +78,8 @@ export default function DisclaimerPage() {
               <h2 className="text-base font-black mb-3" style={{ color: "#0f2340" }}>Contact</h2>
               <p>
                 If you have questions about this disclaimer or our editorial practices, please reach out at{" "}
-                <a href="mailto:advertise@fieldsalestools.com" style={{ color: "#1d6ce8" }}>
-                  advertise@fieldsalestools.com
+                <a href="mailto:hello@fieldsalestools.com" style={{ color: "#1d6ce8" }}>
+                  hello@fieldsalestools.com
                 </a>.
               </p>
             </section>

@@ -81,7 +81,7 @@ export default function SubmitPage() {
           </p>
 
           <form
-            action="mailto:advertise@fieldsalestools.com"
+            action="mailto:hello@fieldsalestools.com"
             method="get"
             encType="text/plain"
             className="space-y-5"
@@ -212,8 +212,8 @@ export default function SubmitPage() {
 
             <p className="text-xs text-center" style={{ color: "#94a3b8" }}>
               This will open your email client. You can also email us directly at{" "}
-              <a href="mailto:advertise@fieldsalestools.com" style={{ color: "#1d6ce8" }}>
-                advertise@fieldsalestools.com
+              <a href="mailto:hello@fieldsalestools.com" style={{ color: "#1d6ce8" }}>
+                hello@fieldsalestools.com
               </a>
             </p>
           </form>

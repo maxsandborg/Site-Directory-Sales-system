@@ -122,7 +122,7 @@ export default function AboutPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a
-              href="mailto:advertise@fieldsalestools.com"
+              href="mailto:hello@fieldsalestools.com"
               className="inline-block text-sm font-bold px-6 py-3 rounded-xl no-underline text-white"
               style={{ backgroundColor: "#1d6ce8" }}
             >

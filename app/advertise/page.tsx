@@ -81,7 +81,7 @@ export default function AdvertisePage() {
                   "Included in email features",
                 ],
                 cta: "Get Started",
-                ctaHref: "mailto:advertise@fieldsalestools.com?subject=Featured Placement Inquiry",
+                ctaHref: "mailto:hello@fieldsalestools.com?subject=Featured Placement Inquiry",
                 ctaColor: "#1d6ce8",
               },
               {
@@ -99,7 +99,7 @@ export default function AdvertisePage() {
                   "Monthly performance report",
                 ],
                 cta: "Contact Us",
-                ctaHref: "mailto:advertise@fieldsalestools.com?subject=Full Package Inquiry",
+                ctaHref: "mailto:hello@fieldsalestools.com?subject=Full Package Inquiry",
                 ctaColor: "#f59e0b",
               },
             ].map((pkg) => (
@@ -150,11 +150,11 @@ export default function AdvertisePage() {
             Email us and we&apos;ll get your listing set up within 24 hours.
           </p>
           <a
-            href="mailto:advertise@fieldsalestools.com"
+            href="mailto:hello@fieldsalestools.com"
             className="inline-block text-sm font-bold px-8 py-3 rounded-xl no-underline text-white"
             style={{ backgroundColor: "#1d6ce8" }}
           >
-            advertise@fieldsalestools.com
+            hello@fieldsalestools.com
           </a>
         </section>
       </main>
