@@ -44,9 +44,23 @@ export default async function IndustryPage({ params }: { params: Promise<{ slug:
     t.industries.includes(ind.industryKey)
   );
 
+  const pageUrl = `https://www.fieldsalestools.com/industries/${slug}`;
+  const breadcrumbLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.fieldsalestools.com" },
+      { "@type": "ListItem", position: 2, name: "Industries", item: "https://www.fieldsalestools.com/industries" },
+      { "@type": "ListItem", position: 3, name: ind.heroHeading, item: pageUrl },
+    ],
+  };
+
   return (
     <div className="min-h-screen flex flex-col" style={{ backgroundColor: "#f4f6f9" }}>
-
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+      />
 
       {/* Hero */}
       <section style={{ background: "linear-gradient(135deg, #0f2340 0%, #1a3a5c 100%)" }}>

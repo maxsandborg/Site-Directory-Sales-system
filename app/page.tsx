@@ -5,6 +5,7 @@ import { getReview } from "@/data/reviews";
 import { comparisons } from "@/data/comparisons";
 import FaqAccordion from "@/components/FaqAccordion";
 import ToolLogo from "@/components/ToolLogo";
+import EmailCapture from "@/components/EmailCapture";
 
 export const metadata: Metadata = {
   title: "Best Field Sales Software 2026 — Reviews, Comparisons & Pricing | FieldSalesTools.com",
@@ -1430,6 +1431,11 @@ export default function HomePage() {
             </a>
           </p>
         </div>
+      </section>
+
+      {/* ── Newsletter CTA ── */}
+      <section style={{ padding: "0 20px 48px", maxWidth: 800, margin: "0 auto" }}>
+        <EmailCapture />
       </section>
 
       {/* ── SOCIAL PROOF ── */}

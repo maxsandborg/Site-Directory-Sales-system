@@ -2,6 +2,7 @@ import Link from "next/link";
 import { tools } from "@/data/tools";
 import { getReview } from "@/data/reviews";
 import ToolLogo from "@/components/ToolLogo";
+import EmailCapture from "@/components/EmailCapture";
 
 export const metadata = {
   title: "Best Field Sales Software 2026 — 20+ Tools Reviewed | FieldSalesTools.com",
@@ -10,12 +11,14 @@ export const metadata = {
 };
 
 const CATEGORIES = [
-  { label: "All Tools", value: null },
-  { label: "D2D & Canvassing", value: "D2D & Canvassing" },
-  { label: "CRM & Pipeline", value: "CRM & Pipeline" },
-  { label: "Route Optimization", value: "Route Optimization" },
-  { label: "Team Management", value: "Team Management" },
-  { label: "Analytics", value: "Analytics" },
+  { label: "All Tools", href: "/tools" },
+  { label: "Field Sales CRM", href: "/tools/category/field-sales-crm" },
+  { label: "Territory Management", href: "/tools/category/territory-management" },
+  { label: "D2D Software", href: "/tools/category/d2d-software" },
+  { label: "Route Planning", href: "/tools/category/route-planning" },
+  { label: "Canvassing", href: "/tools/category/canvassing" },
+  { label: "Solar CRM", href: "/tools/category/solar-crm" },
+  { label: "Enterprise Sales", href: "/tools/category/enterprise-sales" },
 ];
 
 function EditorScoreBadge({ score }: { score: number }) {
@@ -154,7 +157,7 @@ export default function ToolsPage() {
           {CATEGORIES.map((cat) => (
             <Link
               key={cat.label}
-              href={cat.value ? `/tools?category=${encodeURIComponent(cat.value)}` : "/tools"}
+              href={cat.href}
               style={{
                 display: "inline-block",
                 padding: "7px 14px",
@@ -162,9 +165,9 @@ export default function ToolsPage() {
                 fontSize: 13,
                 fontWeight: 500,
                 textDecoration: "none",
-                background: cat.value === null ? "#1d6ce8" : "#fff",
-                color: cat.value === null ? "#fff" : "#475569",
-                border: cat.value === null ? "none" : "1px solid #e2e8f0",
+                background: cat.href === "/tools" ? "#1d6ce8" : "#fff",
+                color: cat.href === "/tools" ? "#fff" : "#475569",
+                border: cat.href === "/tools" ? "none" : "1px solid #e2e8f0",
               }}
             >
               {cat.label}
@@ -478,6 +481,11 @@ export default function ToolsPage() {
               Get Listed → From $299/mo
             </Link>
           </div>
+        </div>
+
+        {/* Newsletter signup */}
+        <div style={{ marginTop: 20 }}>
+          <EmailCapture variant="inline" />
         </div>
 
         {/* Stack guides strip */}

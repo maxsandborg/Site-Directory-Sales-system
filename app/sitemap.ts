@@ -78,6 +78,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9, // High-intent buyer pages — top priority
   }));
 
+  // ── Category pages ──────────────────────────────────────────────────────────
+  const categorySlugs = [
+    "field-sales-crm",
+    "territory-management",
+    "d2d-software",
+    "route-planning",
+    "canvassing",
+    "solar-crm",
+    "enterprise-sales",
+  ];
+  const categoryUrls = categorySlugs.map((slug) => ({
+    url: `${baseUrl}/tools/category/${slug}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+  }));
+
   return [
     ...staticPages,
     ...stackUrls,
@@ -86,5 +103,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...industryUrls,
     ...alternativeUrls,
     ...bestForUrls,
+    ...categoryUrls,
   ];
 }
