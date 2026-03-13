@@ -1,5 +1,7 @@
 "use client";
 
+import { useState } from "react";
+
 type Props = {
   website: string;
   name: string;
@@ -7,33 +9,58 @@ type Props = {
   size?: number;
 };
 
+/**
+ * Renders a tool logo using Google's Favicon API (reliable, always returns an image).
+ * Falls back to first-letter avatar if even that fails.
+ */
 export default function ToolLogo({ website, name, fallbackEmoji, size = 40 }: Props) {
+  const [error, setError] = useState(false);
+
   let domain = "";
   try {
-    domain = new URL(website).hostname;
+    domain = new URL(website).hostname.replace(/^www\./, "");
   } catch {
-    // fallback to emoji if URL is invalid
+    // invalid URL — show fallback
   }
 
-  if (!domain) {
-    return <span style={{ fontSize: size * 0.6 }}>{fallbackEmoji}</span>;
+  if (!domain || error) {
+    return (
+      <div
+        style={{
+          width: size,
+          height: size,
+          borderRadius: 8,
+          background: "#e2e8f0",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          fontSize: size * 0.45,
+          fontWeight: 800,
+          color: "#475569",
+        }}
+      >
+        {name.charAt(0).toUpperCase()}
+      </div>
+    );
   }
+
+  // Google Favicon API — request the largest available size (128px)
+  const faviconUrl = `https://www.google.com/s2/favicons?domain=${domain}&sz=128`;
 
   return (
     <img
-      src={`https://logo.clearbit.com/${domain}`}
+      src={faviconUrl}
       alt={`${name} logo`}
       width={size}
       height={size}
-      style={{ objectFit: "contain", width: `${size}px`, height: `${size}px` }}
-      onError={(e) => {
-        const target = e.currentTarget;
-        target.style.display = "none";
-        const parent = target.parentElement;
-        if (parent) {
-          parent.innerHTML = `<span style="font-size:${size * 0.55}px">${fallbackEmoji}</span>`;
-        }
+      loading="lazy"
+      style={{
+        objectFit: "contain",
+        width: `${size}px`,
+        height: `${size}px`,
+        borderRadius: 4,
       }}
+      onError={() => setError(true)}
     />
   );
 }
